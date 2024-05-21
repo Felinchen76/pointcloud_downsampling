@@ -98,10 +98,9 @@ def create_pcd_from_mesh(mesh):
     return mesh.sample_points_uniformly(500)
 
 
-def load_model():
+def load_model(link, path):
     # http://ycb-benchmarks.s3-website-us-east-1.amazonaws.com/
-    model_url = "http://ycb-benchmarks.s3-website-us-east-1.amazonaws.com/data/berkeley/001_chips_can/001_chips_can_berkeley_meshes.tgz"
-    response = requests.get(model_url)
+    response = requests.get(link)
     tgz_data = BytesIO(response.content)
     # set the current working directory to the script's directory
     script_directory = os.path.dirname(os.path.abspath(__file__))
@@ -109,7 +108,7 @@ def load_model():
     with tarfile.open(fileobj=tgz_data, mode="r:gz") as tar_ref:
         tar_ref.extractall(script_directory)
     # join paths
-    model_path = os.path.join(script_directory, "001_chips_can", "clouds", "merged_cloud.ply")
+    model_path = os.path.join(script_directory, path, "clouds", "merged_cloud.ply")
     # load pointcloud
     pcd = o3d.io.read_point_cloud(model_path)
     return pcd
@@ -282,11 +281,11 @@ def calc_vol_of_hull(hull):
     hullVol = hull.get_volume()
     print(hullVol)
 
-
 try:
-    pcd = load_model()
-    visualize_model(pcd)
-    get_num_points(pcd)
+    print("hi")
+    # pcd = load_model()
+    # visualize_model(pcd)
+    # get_num_points(pcd)
     # coordinates = random_downsampling(pcd, 70000)
     # rndPtCloud = create_pointcloud_from_coordinates(coordinates)
     # visualize_model(rndPtCloud)
@@ -320,19 +319,51 @@ def compute_chamfer_dist(original_pcd, downsampled_pcd):
     avg_dist_forward = torch.mean(dist_forward)  # oder torch.sum(dist_forward)
     return avg_dist_forward.item()
 
-
+# load the 3 chosen YCB Objects
+#ycb_round = load_model("http://ycb-benchmarks.s3-website-us-east-1.amazonaws.com/data/berkeley/049_small_clamp/049_small_clamp_berkeley_meshes.tgz","049_small_clamp")
+#visualize_model(ycb_round)
+#ycb_cube = load_model("http://ycb-benchmarks.s3-website-us-east-1.amazonaws.com/data/berkeley/065-a_cups/065-a_cups_berkeley_meshes.tgz","065-a_cups")
+#visualize_model(ycb_cube)
+#ycb_cone = load_model("http://ycb-benchmarks.s3-website-us-east-1.amazonaws.com/data/berkeley/012_strawberry/012_strawberry_berkeley_meshes.tgz","012_strawberry")
+#visualize_model(ycb_cone)
 # creat synthetic big cone for tests
-conepcd_big = create_cone_pcd(1, 4, 500)
+#conepcd_big = create_cone_pcd(1, 4, 500)
 
 # to do: pfad so angeben, dass man das immer automatisch im projekt hat!
+
+cone = load_cad_model(r"C:\Users\lockf\downsampling_project\cone.ply")
+visualize_model(cone)
+
+sphere = load_cad_model(r"C:\Users\lockf\downsampling_project\sphere.ply")
+visualize_model(sphere)
+
+cube = load_cad_model(r"C:\Users\lockf\downsampling_project\cube.ply")
+visualize_model(cube)
+
 hollow_cone = load_cad_model(r"C:\Users\lockf\downsampling_project\hollowCone.ply")
 visualize_model(hollow_cone)
 
-# creat synthetic small cone for tests
-# conepcd_small = create_cone_pcd(0.5,2.5,500)
-# cone_empty_mesh = create_hollow_cone(conepcd_big, conepcd_small)
+# To Do
+# complex sphere
+complex_sphere = load_cad_model(r"C:\Users\lockf\downsampling_project\complexSphere.ply")
+visualize_model(complex_sphere)
 
-# cone_empty = create_pcd_from_mesh(cone_empty_mesh)
+# To Do
+# complex cube
+pencil = load_cad_model(r"C:\Users\lockf\downsampling_project\pencil_fein.ply")
+visualize_model(pencil)
+
+#To Do
+# teapod
+# source: https://sketchfab.com/3d-models/davis-teapot-materialcleanup-547971eaf21d43f2b6cfcb6be0e7bf11
+teapot = load_cad_model(r"C:\Users\lockf\downsampling_project\teapot.ply")
+visualize_model(teapot)
+
+#To Do
+# book
+# source: https://sketchfab.com/3d-models/book-ba04f5ac66194341bc7d437fb6c94674
+book = load_cad_model(r"C:\Users\lockf\downsampling_project\book.ply")
+visualize_model(book)
 
 # downsample the cone via random downsampling
 coordinatesConeDownsampled = random_downsampling(hollow_cone, 250)
@@ -370,7 +401,7 @@ hullR = get_convex_hull(coneDownsampledR)
 hullV = get_convex_hull(coneDownsampledV)
 
 # compare volumes of the convex hulls
-hullVolOriginal = calc_vol_of_hull(hullOriginal)
+# hullVolOriginal = calc_vol_of_hull(hullOriginal)
 # hullVolR = calc_vol_of_hull(hullR)
 # hullVOlV = calc_vol_of_hull(hullV)
 
