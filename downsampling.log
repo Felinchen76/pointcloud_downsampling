@@ -1,0 +1,239 @@
+2024-06-06 21:26:41,402 - Random Downsampling - Iteration 1: Downsampling durchgeführt, verbleibende Punkte: 166,      Rechenzeit: 0.0050 Sekunden
+2024-06-06 21:26:44,875 - Voxel Downsampling - Iteration 1: Downsampling durchgeführt, verbleibende Punkte: 415,      Rechenzeit: 3.4718 Sekunden
+2024-06-06 21:26:44,875 - Iteration 1: Fehler aufgetreten - write_point_cloud(): incompatible function arguments. The following argument types are supported:
+    1. (filename: str, pointcloud: open3d.cpu.pybind.geometry.PointCloud, format: str = 'auto', write_ascii: bool = False, compressed: bool = False, print_progress: bool = False) -> bool
+
+Invoked with: 'point_cloud_images/voxel_filter1.ply', std::vector<Eigen::Vector3d> with 415 elements.
+Use numpy.asarray() to access data.
+
+Did you forget to `#include <pybind11/stl.h>`? Or <pybind11/complex.h>,
+<pybind11/functional.h>, <pybind11/chrono.h>, etc. Some automatic
+conversions are optional and require extra headers to be included
+when compiling your pybind11 module.
+2024-06-06 21:26:44,962 - Random Downsampling - Iteration 1: Downsampling durchgeführt, verbleibende Punkte: 2604,      Rechenzeit: 0.0875 Sekunden
+2024-06-06 21:27:32,120 - Random Downsampling - Iteration 1: Downsampling durchgeführt, verbleibende Punkte: 166,      Rechenzeit: 0.0035 Sekunden
+2024-06-06 21:27:34,192 - Voxel Downsampling - Iteration 1: Downsampling durchgeführt, verbleibende Punkte: 415,      Rechenzeit: 2.0718 Sekunden
+2024-06-06 21:27:34,192 - Iteration 1: Fehler aufgetreten - write_point_cloud(): incompatible function arguments. The following argument types are supported:
+    1. (filename: str, pointcloud: open3d.cpu.pybind.geometry.PointCloud, format: str = 'auto', write_ascii: bool = False, compressed: bool = False, print_progress: bool = False) -> bool
+
+Invoked with: 'point_cloud_images/voxel_filter1.ply', std::vector<Eigen::Vector3d> with 415 elements.
+Use numpy.asarray() to access data.
+
+Did you forget to `#include <pybind11/stl.h>`? Or <pybind11/complex.h>,
+<pybind11/functional.h>, <pybind11/chrono.h>, etc. Some automatic
+conversions are optional and require extra headers to be included
+when compiling your pybind11 module.
+2024-06-06 21:27:34,255 - Random Downsampling - Iteration 1: Downsampling durchgeführt, verbleibende Punkte: 2035,      Rechenzeit: 0.0630 Sekunden
+2024-06-06 21:30:47,391 - Voxel Downsampling - Iteration 1: Downsampling durchgeführt, verbleibende Punkte: 5089,      Rechenzeit: 193.1358 Sekunden
+2024-06-06 21:30:47,399 - Iteration 1: Fehler aufgetreten - write_point_cloud(): incompatible function arguments. The following argument types are supported:
+    1. (filename: str, pointcloud: open3d.cpu.pybind.geometry.PointCloud, format: str = 'auto', write_ascii: bool = False, compressed: bool = False, print_progress: bool = False) -> bool
+
+Invoked with: 'point_cloud_images/voxel_filter1.ply', std::vector<Eigen::Vector3d> with 5089 elements.
+Use numpy.asarray() to access data.
+
+Did you forget to `#include <pybind11/stl.h>`? Or <pybind11/complex.h>,
+<pybind11/functional.h>, <pybind11/chrono.h>, etc. Some automatic
+conversions are optional and require extra headers to be included
+when compiling your pybind11 module.
+2024-06-06 21:30:47,440 - Random Downsampling - Iteration 1: Downsampling durchgeführt, verbleibende Punkte: 2604,      Rechenzeit: 0.0414 Sekunden
+2024-06-06 21:32:18,182 - Random Downsampling - Iteration 1: Downsampling durchgeführt, verbleibende Punkte: 166,      Rechenzeit: 0.0000 Sekunden
+2024-06-06 21:32:20,117 - Voxel Downsampling - Iteration 1: Downsampling durchgeführt, verbleibende Punkte: 415,      Rechenzeit: 1.9348 Sekunden
+2024-06-06 21:32:20,117 - Iteration 1: Fehler aufgetreten - write_point_cloud(): incompatible function arguments. The following argument types are supported:
+    1. (filename: str, pointcloud: open3d.cpu.pybind.geometry.PointCloud, format: str = 'auto', write_ascii: bool = False, compressed: bool = False, print_progress: bool = False) -> bool
+
+Invoked with: 'point_cloud_images/voxel_filter1.ply', std::vector<Eigen::Vector3d> with 415 elements.
+Use numpy.asarray() to access data.
+
+Did you forget to `#include <pybind11/stl.h>`? Or <pybind11/complex.h>,
+<pybind11/functional.h>, <pybind11/chrono.h>, etc. Some automatic
+conversions are optional and require extra headers to be included
+when compiling your pybind11 module.
+2024-06-06 21:32:20,147 - Random Downsampling - Iteration 1: Downsampling durchgeführt, verbleibende Punkte: 2035,      Rechenzeit: 0.0304 Sekunden
+2024-06-06 21:33:26,641 - Random Downsampling - Iteration 1: Downsampling durchgeführt, verbleibende Punkte: 166,      Rechenzeit: 0.0005 Sekunden
+2024-06-06 21:33:29,260 - Voxel Downsampling - Iteration 1: Downsampling durchgeführt, verbleibende Punkte: 415,      Rechenzeit: 2.6190 Sekunden
+2024-06-06 21:33:29,260 - Iteration 1: Fehler aufgetreten - write_point_cloud(): incompatible function arguments. The following argument types are supported:
+    1. (filename: str, pointcloud: open3d.cpu.pybind.geometry.PointCloud, format: str = 'auto', write_ascii: bool = False, compressed: bool = False, print_progress: bool = False) -> bool
+
+Invoked with: 'point_cloud_images/voxel_filter1.ply', std::vector<Eigen::Vector3d> with 415 elements.
+Use numpy.asarray() to access data.
+
+Did you forget to `#include <pybind11/stl.h>`? Or <pybind11/complex.h>,
+<pybind11/functional.h>, <pybind11/chrono.h>, etc. Some automatic
+conversions are optional and require extra headers to be included
+when compiling your pybind11 module.
+2024-06-06 21:33:29,297 - Random Downsampling - Iteration 1: Downsampling durchgeführt, verbleibende Punkte: 2035,      Rechenzeit: 0.0365 Sekunden
+2024-06-06 21:33:54,661 - Random Downsampling - Iteration 1: Downsampling durchgeführt, verbleibende Punkte: 166,      Rechenzeit: 0.0000 Sekunden
+2024-06-06 21:33:55,729 - Voxel Downsampling - Iteration 1: Downsampling durchgeführt, verbleibende Punkte: 415,      Rechenzeit: 1.0677 Sekunden
+2024-06-06 21:33:55,729 - Iteration 1: Fehler aufgetreten - write_point_cloud(): incompatible function arguments. The following argument types are supported:
+    1. (filename: str, pointcloud: open3d.cpu.pybind.geometry.PointCloud, format: str = 'auto', write_ascii: bool = False, compressed: bool = False, print_progress: bool = False) -> bool
+
+Invoked with: 'point_cloud_images/voxel_filter1.ply', std::vector<Eigen::Vector3d> with 415 elements.
+Use numpy.asarray() to access data.
+
+Did you forget to `#include <pybind11/stl.h>`? Or <pybind11/complex.h>,
+<pybind11/functional.h>, <pybind11/chrono.h>, etc. Some automatic
+conversions are optional and require extra headers to be included
+when compiling your pybind11 module.
+2024-06-06 21:33:55,759 - Random Downsampling - Iteration 1: Downsampling durchgeführt, verbleibende Punkte: 2035,      Rechenzeit: 0.0304 Sekunden
+2024-06-06 21:37:35,202 - Random Downsampling - Iteration 1: Downsampling durchgeführt, verbleibende Punkte: 166,      Rechenzeit: 0.0010 Sekunden
+2024-06-06 21:37:37,234 - Voxel Downsampling - Iteration 1: Downsampling durchgeführt, verbleibende Punkte: 415,      Rechenzeit: 2.0321 Sekunden
+2024-06-06 21:37:37,234 - Iteration 1: Fehler aufgetreten - write_point_cloud(): incompatible function arguments. The following argument types are supported:
+    1. (filename: str, pointcloud: open3d.cpu.pybind.geometry.PointCloud, format: str = 'auto', write_ascii: bool = False, compressed: bool = False, print_progress: bool = False) -> bool
+
+Invoked with: 'point_cloud_images/voxel_filter1.ply', std::vector<Eigen::Vector3d> with 415 elements.
+Use numpy.asarray() to access data.
+
+Did you forget to `#include <pybind11/stl.h>`? Or <pybind11/complex.h>,
+<pybind11/functional.h>, <pybind11/chrono.h>, etc. Some automatic
+conversions are optional and require extra headers to be included
+when compiling your pybind11 module.
+2024-06-06 21:37:37,234 - Alle Iterationen abgeschlossen.
+2024-06-06 21:38:52,345 - Random Downsampling - Iteration 1: Downsampling durchgeführt, verbleibende Punkte: 166,      Rechenzeit: 0.0000 Sekunden
+2024-06-06 21:38:53,400 - Voxel Downsampling - Iteration 1: Downsampling durchgeführt, verbleibende Punkte: 415,      Rechenzeit: 1.0551 Sekunden
+2024-06-06 21:38:53,408 - Iteration 1: Fehler aufgetreten - write_point_cloud(): incompatible function arguments. The following argument types are supported:
+    1. (filename: str, pointcloud: open3d.cpu.pybind.geometry.PointCloud, format: str = 'auto', write_ascii: bool = False, compressed: bool = False, print_progress: bool = False) -> bool
+
+Invoked with: 'point_cloud_images/voxel_filter1.ply', std::vector<Eigen::Vector3d> with 415 elements.
+Use numpy.asarray() to access data.
+
+Did you forget to `#include <pybind11/stl.h>`? Or <pybind11/complex.h>,
+<pybind11/functional.h>, <pybind11/chrono.h>, etc. Some automatic
+conversions are optional and require extra headers to be included
+when compiling your pybind11 module.
+2024-06-06 21:38:53,408 - Alle Iterationen abgeschlossen.
+2024-06-06 21:40:16,786 - Random Downsampling - Iteration 1: Downsampling durchgeführt, verbleibende Punkte: 166,      Rechenzeit: 0.0018 Sekunden
+2024-06-06 21:40:17,987 - Voxel Downsampling - Iteration 1: Downsampling durchgeführt, verbleibende Punkte: 415,      Rechenzeit: 1.2011 Sekunden
+2024-06-06 21:40:17,987 - Iteration 1: Fehler aufgetreten - write_point_cloud(): incompatible function arguments. The following argument types are supported:
+    1. (filename: str, pointcloud: open3d.cpu.pybind.geometry.PointCloud, format: str = 'auto', write_ascii: bool = False, compressed: bool = False, print_progress: bool = False) -> bool
+
+Invoked with: 'point_cloud_images/voxel_filter1.ply', std::vector<Eigen::Vector3d> with 415 elements.
+Use numpy.asarray() to access data.
+
+Did you forget to `#include <pybind11/stl.h>`? Or <pybind11/complex.h>,
+<pybind11/functional.h>, <pybind11/chrono.h>, etc. Some automatic
+conversions are optional and require extra headers to be included
+when compiling your pybind11 module.
+2024-06-06 21:40:17,988 - Alle Iterationen abgeschlossen.
+2024-06-06 21:40:47,135 - Random Downsampling - Iteration 1: Downsampling durchgeführt, verbleibende Punkte: 166,      Rechenzeit: 0.0000 Sekunden
+2024-06-06 21:40:48,189 - Voxel Downsampling - Iteration 1: Downsampling durchgeführt, verbleibende Punkte: 415,      Rechenzeit: 1.0385 Sekunden
+2024-06-06 21:40:48,189 - Iteration 1: Fehler aufgetreten - write_point_cloud(): incompatible function arguments. The following argument types are supported:
+    1. (filename: str, pointcloud: open3d.cpu.pybind.geometry.PointCloud, format: str = 'auto', write_ascii: bool = False, compressed: bool = False, print_progress: bool = False) -> bool
+
+Invoked with: 'point_cloud_images/voxel_filter1.ply', std::vector<Eigen::Vector3d> with 415 elements.
+Use numpy.asarray() to access data.
+
+Did you forget to `#include <pybind11/stl.h>`? Or <pybind11/complex.h>,
+<pybind11/functional.h>, <pybind11/chrono.h>, etc. Some automatic
+conversions are optional and require extra headers to be included
+when compiling your pybind11 module.
+2024-06-06 21:40:48,189 - Alle Iterationen abgeschlossen.
+2024-06-06 21:40:56,026 - Random Downsampling - Iteration 1: Downsampling durchgeführt, verbleibende Punkte: 166,      Rechenzeit: 0.0000 Sekunden
+2024-06-06 21:40:57,096 - Voxel Downsampling - Iteration 1: Downsampling durchgeführt, verbleibende Punkte: 415,      Rechenzeit: 1.0534 Sekunden
+2024-06-06 21:40:57,096 - Iteration 1: Fehler aufgetreten - write_point_cloud(): incompatible function arguments. The following argument types are supported:
+    1. (filename: str, pointcloud: open3d.cpu.pybind.geometry.PointCloud, format: str = 'auto', write_ascii: bool = False, compressed: bool = False, print_progress: bool = False) -> bool
+
+Invoked with: 'point_cloud_images/voxel_filter1.ply', std::vector<Eigen::Vector3d> with 415 elements.
+Use numpy.asarray() to access data.
+
+Did you forget to `#include <pybind11/stl.h>`? Or <pybind11/complex.h>,
+<pybind11/functional.h>, <pybind11/chrono.h>, etc. Some automatic
+conversions are optional and require extra headers to be included
+when compiling your pybind11 module.
+2024-06-06 21:40:57,096 - Alle Iterationen abgeschlossen.
+2024-06-06 21:41:15,673 - Random Downsampling - Iteration 1: Downsampling durchgeführt, verbleibende Punkte: 166,      Rechenzeit: 0.0000 Sekunden
+2024-06-06 21:41:16,711 - Voxel Downsampling - Iteration 1: Downsampling durchgeführt, verbleibende Punkte: 415,      Rechenzeit: 1.0375 Sekunden
+2024-06-06 21:41:16,711 - Iteration 1: Fehler aufgetreten - write_point_cloud(): incompatible function arguments. The following argument types are supported:
+    1. (filename: str, pointcloud: open3d.cpu.pybind.geometry.PointCloud, format: str = 'auto', write_ascii: bool = False, compressed: bool = False, print_progress: bool = False) -> bool
+
+Invoked with: 'point_cloud_images/voxel_filter1.ply', std::vector<Eigen::Vector3d> with 415 elements.
+Use numpy.asarray() to access data.
+
+Did you forget to `#include <pybind11/stl.h>`? Or <pybind11/complex.h>,
+<pybind11/functional.h>, <pybind11/chrono.h>, etc. Some automatic
+conversions are optional and require extra headers to be included
+when compiling your pybind11 module.
+2024-06-06 21:41:16,711 - Alle Iterationen abgeschlossen.
+2024-06-06 21:43:09,817 - Random Downsampling - Iteration 1: Downsampling durchgeführt, verbleibende Punkte: 166,      Rechenzeit: 0.0162 Sekunden
+2024-06-06 21:43:10,893 - Voxel Downsampling - Iteration 1: Downsampling durchgeführt, verbleibende Punkte: 415,      Rechenzeit: 1.0751 Sekunden
+2024-06-06 21:43:10,893 - Iteration 1: Fehler aufgetreten - write_point_cloud(): incompatible function arguments. The following argument types are supported:
+    1. (filename: str, pointcloud: open3d.cpu.pybind.geometry.PointCloud, format: str = 'auto', write_ascii: bool = False, compressed: bool = False, print_progress: bool = False) -> bool
+
+Invoked with: 'point_cloud_images/voxel_filter1.ply', std::vector<Eigen::Vector3d> with 415 elements.
+Use numpy.asarray() to access data.
+
+Did you forget to `#include <pybind11/stl.h>`? Or <pybind11/complex.h>,
+<pybind11/functional.h>, <pybind11/chrono.h>, etc. Some automatic
+conversions are optional and require extra headers to be included
+when compiling your pybind11 module.
+2024-06-06 21:43:10,893 - Alle Iterationen abgeschlossen.
+2024-06-06 21:44:34,779 - Random Downsampling - Iteration 1: Downsampling durchgeführt, verbleibende Punkte: 166,      Rechenzeit: 0.0000 Sekunden
+2024-06-06 21:44:35,849 - Voxel Downsampling - Iteration 1: Downsampling durchgeführt, verbleibende Punkte: 415,      Rechenzeit: 1.0696 Sekunden
+2024-06-06 21:44:35,849 - Iteration 1: Fehler aufgetreten - write_point_cloud(): incompatible function arguments. The following argument types are supported:
+    1. (filename: str, pointcloud: open3d.cpu.pybind.geometry.PointCloud, format: str = 'auto', write_ascii: bool = False, compressed: bool = False, print_progress: bool = False) -> bool
+
+Invoked with: 'point_cloud_images/voxel_filter1.ply', std::vector<Eigen::Vector3d> with 415 elements.
+Use numpy.asarray() to access data.
+
+Did you forget to `#include <pybind11/stl.h>`? Or <pybind11/complex.h>,
+<pybind11/functional.h>, <pybind11/chrono.h>, etc. Some automatic
+conversions are optional and require extra headers to be included
+when compiling your pybind11 module.
+2024-06-06 21:44:35,849 - Alle Iterationen abgeschlossen.
+2024-06-06 21:48:40,167 - Random Downsampling - Iteration 1: Downsampling durchgeführt, verbleibende Punkte: 166,      Rechenzeit: 0.0000 Sekunden
+2024-06-06 21:48:42,021 - Voxel Downsampling - Iteration 1: Downsampling durchgeführt, verbleibende Punkte: 415,      Rechenzeit: 1.8456 Sekunden
+2024-06-06 21:48:42,021 - Iteration 1: Fehler aufgetreten - 'open3d.cpu.pybind.utility.Vector3dVector' object has no attribute 'points'
+2024-06-06 21:48:42,021 - Alle Iterationen abgeschlossen.
+2024-06-06 21:50:04,180 - Random Downsampling - Iteration 1: Downsampling durchgeführt, verbleibende Punkte: 166,      Rechenzeit: 0.0005 Sekunden
+2024-06-06 21:50:05,372 - Voxel Downsampling - Iteration 1: Downsampling durchgeführt, verbleibende Punkte: 415,      Rechenzeit: 1.1913 Sekunden
+2024-06-06 21:50:05,372 - Iteration 1: Fehler aufgetreten - 'open3d.cpu.pybind.utility.Vector3dVector' object has no attribute 'points'
+2024-06-06 21:50:05,372 - Alle Iterationen abgeschlossen.
+2024-06-06 21:58:52,739 - Random Downsampling - Iteration 1: Downsampling durchgeführt, verbleibende Punkte: 166,      Rechenzeit: 0.0005 Sekunden
+2024-06-06 21:58:53,780 - Voxel Downsampling - Iteration 1: Downsampling durchgeführt, verbleibende Punkte: 415,      Rechenzeit: 1.0413 Sekunden
+2024-06-06 21:58:53,780 - Iteration 1: Fehler aufgetreten - 'open3d.cpu.pybind.utility.Vector3dVector' object has no attribute 'points'
+2024-06-06 21:58:53,780 - Alle Iterationen abgeschlossen.
+2024-06-06 22:04:38,230 - Random Downsampling - Iteration 1: Downsampling durchgeführt, verbleibende Punkte: 166,      Rechenzeit: 0.0060 Sekunden
+2024-06-06 22:04:39,296 - Voxel Downsampling - Iteration 1: Downsampling durchgeführt, verbleibende Punkte: 415,      Rechenzeit: 1.0661 Sekunden
+2024-06-06 22:04:39,296 - Iteration 1: Fehler aufgetreten - 'open3d.cpu.pybind.utility.Vector3dVector' object has no attribute 'points'
+2024-06-06 22:04:39,296 - Alle Iterationen abgeschlossen.
+2024-06-06 22:06:51,993 - Random Downsampling - Iteration 1: Downsampling durchgeführt, verbleibende Punkte: 166,      Rechenzeit: 0.0000 Sekunden
+2024-06-06 22:06:53,035 - Voxel Downsampling - Iteration 1: Downsampling durchgeführt, verbleibende Punkte: 415,      Rechenzeit: 1.0425 Sekunden
+2024-06-06 22:06:53,035 - Iteration 1: Fehler aufgetreten - 'open3d.cpu.pybind.utility.Vector3dVector' object has no attribute 'points'
+2024-06-06 22:06:53,035 - Alle Iterationen abgeschlossen.
+2024-06-06 22:08:44,569 - Random Downsampling - Iteration 1: Downsampling durchgeführt, verbleibende Punkte: 166,      Rechenzeit: 0.0000 Sekunden
+2024-06-06 22:08:45,630 - Voxel Downsampling - Iteration 1: Downsampling durchgeführt, verbleibende Punkte: 415,      Rechenzeit: 1.0610 Sekunden
+2024-06-06 22:08:45,630 - Iteration 1: Fehler aufgetreten - 'open3d.cpu.pybind.utility.Vector3dVector' object has no attribute 'points'
+2024-06-06 22:08:45,630 - Alle Iterationen abgeschlossen.
+2024-06-06 22:09:20,510 - Random Downsampling - Iteration 1: Downsampling durchgeführt, verbleibende Punkte: 166,      Rechenzeit: 0.0000 Sekunden
+2024-06-06 22:09:21,576 - Voxel Downsampling - Iteration 1: Downsampling durchgeführt, verbleibende Punkte: 415,      Rechenzeit: 1.0657 Sekunden
+2024-06-06 22:09:21,576 - Iteration 1: Fehler aufgetreten - 'open3d.cpu.pybind.utility.Vector3dVector' object has no attribute 'points'
+2024-06-06 22:09:21,576 - Alle Iterationen abgeschlossen.
+2024-06-06 22:09:48,955 - Random Downsampling - Iteration 1: Downsampling durchgeführt, verbleibende Punkte: 166,      Rechenzeit: 0.0000 Sekunden
+2024-06-06 22:09:50,500 - Voxel Downsampling - Iteration 1: Downsampling durchgeführt, verbleibende Punkte: 415,      Rechenzeit: 1.5337 Sekunden
+2024-06-06 22:09:50,500 - Iteration 1: Fehler aufgetreten - 'open3d.cpu.pybind.utility.Vector3dVector' object has no attribute 'points'
+2024-06-06 22:09:50,500 - Alle Iterationen abgeschlossen.
+2024-06-06 22:10:00,255 - Random Downsampling - Iteration 1: Downsampling durchgeführt, verbleibende Punkte: 166,      Rechenzeit: 0.0000 Sekunden
+2024-06-06 22:10:01,935 - Voxel Downsampling - Iteration 1: Downsampling durchgeführt, verbleibende Punkte: 415,      Rechenzeit: 1.6797 Sekunden
+2024-06-06 22:10:01,935 - Iteration 1: Fehler aufgetreten - 'open3d.cpu.pybind.utility.Vector3dVector' object has no attribute 'points'
+2024-06-06 22:10:01,935 - Alle Iterationen abgeschlossen.
+2024-06-06 22:14:06,131 - Random Downsampling - Iteration 1: Downsampling durchgeführt, verbleibende Punkte: 166,      Rechenzeit: 0.0000 Sekunden
+2024-06-06 22:14:07,277 - Voxel Downsampling - Iteration 1: Downsampling durchgeführt, verbleibende Punkte: 415,      Rechenzeit: 1.1456 Sekunden
+2024-06-06 22:14:07,277 - Iteration 1: Fehler aufgetreten - 'open3d.cpu.pybind.utility.Vector3dVector' object has no attribute 'points'
+2024-06-06 22:14:07,277 - Alle Iterationen abgeschlossen.
+2024-06-06 22:14:44,122 - Random Downsampling - Iteration 1: Downsampling durchgeführt, verbleibende Punkte: 166,      Rechenzeit: 0.0000 Sekunden
+2024-06-06 22:14:45,895 - Voxel Downsampling - Iteration 1: Downsampling durchgeführt, verbleibende Punkte: 415,      Rechenzeit: 1.7730 Sekunden
+2024-06-06 22:14:45,895 - Iteration 1: Fehler aufgetreten - 'open3d.cpu.pybind.utility.Vector3dVector' object has no attribute 'points'
+2024-06-06 22:14:45,895 - Alle Iterationen abgeschlossen.
+2024-06-06 22:15:05,470 - Random Downsampling - Iteration 1: Downsampling durchgeführt, verbleibende Punkte: 166,      Rechenzeit: 0.0000 Sekunden
+2024-06-06 22:15:06,941 - Voxel Downsampling - Iteration 1: Downsampling durchgeführt, verbleibende Punkte: 415,      Rechenzeit: 1.4708 Sekunden
+2024-06-06 22:15:55,427 - Random Downsampling - Iteration 1: Downsampling durchgeführt, verbleibende Punkte: 166,      Rechenzeit: 0.0016 Sekunden
+2024-06-06 22:15:56,482 - Voxel Downsampling - Iteration 1: Downsampling durchgeführt, verbleibende Punkte: 415,      Rechenzeit: 1.0553 Sekunden
+2024-06-06 22:17:03,701 - Random Downsampling - Iteration 1: Downsampling durchgeführt, verbleibende Punkte: 166,      Rechenzeit: 0.0000 Sekunden
+2024-06-06 22:17:05,489 - Voxel Downsampling - Iteration 1: Downsampling durchgeführt, verbleibende Punkte: 415,      Rechenzeit: 1.7872 Sekunden
+2024-06-06 22:17:20,633 - Random Downsampling - Iteration 1: Downsampling durchgeführt, verbleibende Punkte: 166,      Rechenzeit: 0.0054 Sekunden
+2024-06-06 22:17:21,697 - Voxel Downsampling - Iteration 1: Downsampling durchgeführt, verbleibende Punkte: 415,      Rechenzeit: 1.0641 Sekunden
+2024-06-06 22:17:21,726 - Farthest Point Downsampling - Iteration 1: Downsampling durchgeführt, verbleibende Punkte: 166, Rechenzeit: 0.0205 Sekunden
+2024-06-06 22:17:21,726 - Alle Iterationen abgeschlossen.
+2024-06-06 22:23:03,494 - Random Downsampling - Iteration 1: Downsampling durchgeführt, verbleibende Punkte: 166,      Rechenzeit: 0.0000 Sekunden
+2024-06-06 22:23:04,538 - Voxel Downsampling - Iteration 1: Downsampling durchgeführt, verbleibende Punkte: 415,      Rechenzeit: 1.0435 Sekunden
+2024-06-06 22:23:04,556 - Farthest Point Downsampling - Iteration 1: Downsampling durchgeführt, verbleibende Punkte: 166, Rechenzeit: 0.0184 Sekunden
+2024-06-06 22:23:04,556 - Alle Iterationen abgeschlossen.
