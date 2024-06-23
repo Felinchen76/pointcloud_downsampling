@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[2]:
-
-
 #Imports
 from io import BytesIO
 import time
@@ -17,8 +11,6 @@ import numpy as np
 from scipy.spatial import distance
 from scipy.spatial.distance import pdist, squareform
 
-
-# In[3]:
 
 
 def gromov_wasserstein(pc1: np.ndarray, pc2: np.ndarray) -> float:
@@ -45,18 +37,11 @@ def gromov_wasserstein(pc1: np.ndarray, pc2: np.ndarray) -> float:
 
     return (0.5 * out)
 
-
-# In[4]:
-
-
 def create_pcd_from_mesh(mesh):
     mesh.compute_vertex_normals()
     o3d.visualization.draw_geometries([mesh])
     # distribute dots evenly on the surface
     return mesh.sample_points_uniformly(500)
-
-
-# In[5]:
 
 
 def load_model(link, path):
@@ -75,29 +60,17 @@ def load_model(link, path):
     return pcd
 
 
-# In[6]:
-
-
 def load_cad_model(model):
     # load model generated in freecad
     return o3d.io.read_point_cloud(model)
-
-
-# In[7]:
-
 
 def visualize_model(model):
     o3d.visualization.draw_geometries([model])
 
 
-# In[8]:
-
 
 def get_num_points(model):
     print(len(model.points))
-
-
-# In[9]:
 
 
 def create_pointcloud_from_coordinates(coordinates):
@@ -107,16 +80,11 @@ def create_pointcloud_from_coordinates(coordinates):
     return pcd
 
 
-# In[10]:
-
-
 def get_coordinates(model):
     coordinates = [list(point) for point in model.points]
     # print(coordinates[:50])
     return coordinates
 
-
-# In[11]:
 
 
 def random_downsampling(model, endpoints):
@@ -128,9 +96,6 @@ def random_downsampling(model, endpoints):
         del coordinates[rannumb]
     point_cloud = create_pointcloud_from_coordinates(coordinates)
     return point_cloud
-
-
-# In[12]:
 
 
 def farthest_point_sampling(model, num_points_keep):
@@ -158,15 +123,9 @@ def farthest_point_sampling(model, num_points_keep):
     return create_pointcloud_from_coordinates(np.array(retVal))
 
 
-# In[13]:
-
-
 # built in function von open3d
 def radius_outlier_removal_call(model):
     return model.remove_radius_outlier(nb_points=5, radius=0.05)
-
-
-# In[14]:
 
 
 # add noise to pointcloud
@@ -179,8 +138,6 @@ def add_noise(model, noise_value):
     noisy_pc.points = o3d.utility.Vector3dVector(noisy_points)
     return noisy_pc
 
-
-# In[15]:
 
 
 def create_voxel_grid(model, voxel_size):
@@ -247,8 +204,6 @@ def create_points_from_voxel(voxel_model):
     return point_cloud
 
 
-# In[16]:
-
 
 def point_cloud_to_ply(point_cloud, file_name):
     # safe downsampled point cloud as ply data
@@ -256,9 +211,6 @@ def point_cloud_to_ply(point_cloud, file_name):
     if os.path.exists("point_cloud_images/" + file_name):
         os.remove(file_name)
     o3d.io.write_point_cloud(file_name, o3d.geometry.PointCloud(point_cloud.points))
-
-
-# In[34]:
 
 
 def point_cloud_to_ply_simple(point_cloud, file_name):
@@ -270,8 +222,6 @@ def point_cloud_to_ply_simple(point_cloud, file_name):
 
 
 # Laden der Punktewolken
-
-# In[35]:
 
 
 cone = load_cad_model(r"cone.ply")
@@ -289,7 +239,6 @@ book = load_cad_model(r"book.ply")
 
 # ICP Algorithmus Implementierung
 
-# In[18]:
 
 
 def icp_algorithm(source, target):
@@ -313,8 +262,6 @@ def icp_algorithm(source, target):
 
 # Ergebnisse in CSV schreiben
 
-# In[19]:
-
 
 def write_csv(array, filename):
     # Öffne die CSV-Datei im Schreibmodus
@@ -325,8 +272,6 @@ def write_csv(array, filename):
 
 
 # Test Reproduzierbarkeit Rauschen und Gromov-Wasserstein Distanz
-
-# In[23]:
 
 
 rd_wasserstein = []
@@ -376,8 +321,6 @@ print(fp_wasserstein)
 
 # Laufzeittest
 
-# In[ ]:
-
 
 rd_times = []  # List of lists for random downsampling times
 vf_times = []  # List of lists for voxel filter times
@@ -421,7 +364,6 @@ write_csv(fp_times, "fp_times.csv")
 
 # ICP Tests
 
-# In[ ]:
 
 
 # Vergleich auf den Originalwolken
@@ -437,8 +379,6 @@ for model in model_array:
 write_csv(original_fitness, "original_fitness.csv")
 write_csv(original_fitness, "original_icp_fitness.csv")
 
-
-# In[ ]:
 
 
 rd_icp_fitness = []
@@ -482,7 +422,6 @@ write_csv(fp_icp_inlier, "fp_icp_inlier.csv")
 
 # Noisiness test basic models
 
-# In[56]:
 
 
 model_array = [cube, cone, sphere]
@@ -507,16 +446,11 @@ for index, model in enumerate(model_array):
     point_cloud_to_ply(noisy_model_fp_pc, "noisy_fp_" + model_names[index - 1])
 
 
-# In[55]:
-
-
 noisetest = load_cad_model(r"point_cloud_images/noisy_rd_complex_sphere.ply")
 visualize_model(noisetest)
 
 
 # noisiness tests complex models
-
-# In[60]:
 
 
 model_array = [complex_sphere, complex_cube, complex_cone]
@@ -538,8 +472,6 @@ for index, complex_model in enumerate(model_array):
 
 
 # noisiness tests objects
-
-# In[ ]:
 
 
 model_array = [book, teapot, pencil]
@@ -563,13 +495,9 @@ for index, model_object in enumerate(model_array):
     point_cloud_to_ply(noisy_model_object_fp_pc, "noisy_fp_" + model_names[index])
 
 
-# In[25]:
-
 
 visualize_model(load_cad_model(r"point_cloud_images/noisy_rd_cube.ply"))
 
-
-# In[33]:
 
 
 for point in cone.points:
@@ -577,8 +505,6 @@ for point in cone.points:
 
 
 # DOWNSAMPLING SIMPLE AUFBAU
-
-# In[37]:
 
 
 model_array = [cube, cone, sphere]
@@ -602,8 +528,6 @@ for index, model in enumerate(model_array):
     noisy_model_fp_pc.points = o3d.utility.Vector3dVector(np.asarray(noisy_model_fp.points))
     point_cloud_to_ply_simple(noisy_model_fp_pc, "fp_" + model_names[index - 1])
 
-
-# In[ ]:
 
 
 
