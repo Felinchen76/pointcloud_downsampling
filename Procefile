@@ -1,1 +1,2 @@
-python notebook.py
+web: python -m http.server 8000
+worker: python notebook.py
