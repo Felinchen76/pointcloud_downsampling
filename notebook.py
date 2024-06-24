@@ -324,8 +324,8 @@ fp_times = []  # List of lists for farthest point sampling times
 # Methode Spalte, Modell Zeile ?
 # [][][]    
 # [][][]
-# model_array = [cube, sphere, cone, complex_cube, complex_cone, complex_sphere,
-#               pencil, teapot, book]
+model_array = [cube, sphere, cone, complex_cube, complex_cone, complex_sphere,
+               pencil, teapot, book]
 model = cone
 for round in range(num_iterations):
     # random downsampling
