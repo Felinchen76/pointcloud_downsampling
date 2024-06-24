@@ -508,3 +508,14 @@ for index, model in enumerate(model_array):
     noisy_model_fp_pc = o3d.geometry.PointCloud()
     noisy_model_fp_pc.points = o3d.utility.Vector3dVector(np.asarray(noisy_model_fp.points))
     point_cloud_to_ply_simple(noisy_model_fp_pc, "fp_" + model_names[index - 1])
+
+    import faulthandler
+    faulthandler.enable()
+    import traceback
+    import sys
+
+    def excepthook(type, value, tb):
+        traceback.print_exception(type, value, tb)
+        sys.exit(1)
+
+    sys.excepthook = excepthook
