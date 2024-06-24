@@ -1,4 +1,4 @@
-#Imports
+# Imports
 from io import BytesIO
 import time
 import csv
@@ -10,7 +10,6 @@ import tarfile
 import numpy as np
 from scipy.spatial import distance
 from scipy.spatial.distance import pdist, squareform
-
 
 
 def gromov_wasserstein(pc1: np.ndarray, pc2: np.ndarray) -> float:
@@ -36,6 +35,7 @@ def gromov_wasserstein(pc1: np.ndarray, pc2: np.ndarray) -> float:
         out += (unique_ecc[i + 1] - unique_ecc[i]) * np.abs(dist_ecc_fast(ecc1, u) - dist_ecc_fast(ecc2, u))
 
     return (0.5 * out)
+
 
 def create_pcd_from_mesh(mesh):
     mesh.compute_vertex_normals()
@@ -64,9 +64,9 @@ def load_cad_model(model):
     # load model generated in freecad
     return o3d.io.read_point_cloud(model)
 
+
 def visualize_model(model):
     o3d.visualization.draw_geometries([model])
-
 
 
 def get_num_points(model):
@@ -84,7 +84,6 @@ def get_coordinates(model):
     coordinates = [list(point) for point in model.points]
     # print(coordinates[:50])
     return coordinates
-
 
 
 def random_downsampling(model, endpoints):
@@ -139,7 +138,6 @@ def add_noise(model, noise_value):
     return noisy_pc
 
 
-
 def create_voxel_grid(model, voxel_size):
     model_points = np.array(get_coordinates(model))
     min_bound = np.min(model_points, axis=0)
@@ -155,7 +153,7 @@ def create_voxel_grid(model, voxel_size):
         voxelgrid[tuple(voxel_coordinates - 1)] += 1
     # convert voxelgrid to open3d Voxelgrid
     o3d_voxelgrid = o3d.geometry.VoxelGrid.create_from_point_cloud(input=model, voxel_size=voxel_size)
-    #o3d.visualization.draw_geometries([o3d_voxelgrid])
+    # o3d.visualization.draw_geometries([o3d_voxelgrid])
     return o3d_voxelgrid
 
 
@@ -204,7 +202,6 @@ def create_points_from_voxel(voxel_model):
     return point_cloud
 
 
-
 def point_cloud_to_ply(point_cloud, file_name):
     # safe downsampled point cloud as ply data
     file_name = "point_cloud_images/" + file_name + ".ply"
@@ -238,7 +235,6 @@ book = load_cad_model(r"book.ply")
 
 
 # ICP Algorithmus Implementierung
-
 
 
 def icp_algorithm(source, target):
@@ -286,7 +282,7 @@ for noise in array_noise:
     for i in range(num_iterations):
         model = add_noise(model, noise)
 
-        #random downsampling
+        # random downsampling
         rd = random_downsampling(model, int(len(model.points) / 10 * 4))
 
         # voxelgrid
@@ -313,7 +309,6 @@ print(rd_wasserstein)
 print(vf_wasserstein)
 print(fp_wasserstein)
 
-
 # #Results
 # [0.2705866962525741, 0.09077863392603658, 0.09040394193458741, 0.09012493471875607, 0.09032806159254894, 0.09064595901392264, 0.09081015707767472, 0.09051769128054409, 0.09087100194533458, 0.09100855293880897, 0.0922270810223527, 0.09380357259387846, 0.09431286800254036, 0.09222332103671005, 0.09200205698689473, 0.09305364286790276, 0.09251122263758596, 0.09241460383976288, 0.09133464761685794, 0.09126492511066028, 0.09709291277717733, 0.10131523865305526, 0.11661935309986046, 0.12100764792659603, 0.11350478590567419, 0.11304301416130512, 0.11193416216748583, 0.11047181206616286, 0.10708674512802444, 0.1118358187180887]
 # [5.427020676873916, 5.380804378791626, 5.313625265971279, 5.313716712643975, 5.185630644699037, 5.150867098484675, 5.068467151002501, 5.0530188164980006, 5.018578927648757, 4.934578556195397, 4.431708587827005, 4.0243785225533175, 3.6768758663047802, 3.385778716078735, 3.058387405848977, 2.80009206396991, 2.618203519934875, 2.3931745705221057, 2.2454185728055926, 2.0983466728254045, 0.6209216924309475, 0.3535481648429584, 0.1999622122093585, 0.15014320989310376, 0.10383583565177842, 0.09106672519463267, 0.07931363486179116, 0.06336485902402897, 0.05313326302929689, 0.059929603821885544]
@@ -329,41 +324,39 @@ fp_times = []  # List of lists for farthest point sampling times
 # Methode Spalte, Modell Zeile ?
 # [][][]    
 # [][][]
-#model_array = [cube, sphere, cone, complex_cube, complex_cone, complex_sphere,
+# model_array = [cube, sphere, cone, complex_cube, complex_cone, complex_sphere,
 #               pencil, teapot, book]
-for i, model in enumerate(model_array):
-    for round in range(num_iterations):
-        # random downsampling
-        start = time.time()
-        rd = random_downsampling(model, int(len(model.points) / 10 * 4))
-        end = time.time()
-        elapsed_time = end - start
-        rd_times.append(elapsed_time)
+model = cone
+for round in range(num_iterations):
+    # random downsampling
+    start = time.time()
+    rd = random_downsampling(model, int(len(model.points) / 10 * 4))
+    end = time.time()
+    elapsed_time = end - start
+    rd_times.append(elapsed_time)
 
-        # voxelgrid filter
-        start = time.time()
-        vx_grid = create_voxel_grid(model, 0.2)
-        vx = voxel_filter(model, vx_grid, 0.7)
-        end = time.time()
-        elapsed_time = end - start
-        vf_times.append(elapsed_time)
+    # voxelgrid filter
+    start = time.time()
+    vx_grid = create_voxel_grid(model, 0.2)
+    vx = voxel_filter(model, vx_grid, 0.7)
+    end = time.time()
+    elapsed_time = end - start
+    vf_times.append(elapsed_time)
 
-        # farthest point downsampling
-        start = time.time()
-        fp = farthest_point_sampling(model, int(len(model.points) / 10 * 4))
-        end = time.time()
-        fp_pc = o3d.geometry.PointCloud()
-        fp_pc.points = o3d.utility.Vector3dVector(np.asarray(fp.points))
-        elapsed_time = end - start
-        fp_times.append(elapsed_time)  # Add the time to the corresponding model's list
+    # farthest point downsampling
+    start = time.time()
+    fp = farthest_point_sampling(model, int(len(model.points) / 10 * 4))
+    end = time.time()
+    fp_pc = o3d.geometry.PointCloud()
+    fp_pc.points = o3d.utility.Vector3dVector(np.asarray(fp.points))
+    elapsed_time = end - start
+    fp_times.append(elapsed_time)  # Add the time to the corresponding model's list
 
 write_csv(rd_times, "rd_times.csv")
 write_csv(vf_times, "vf_times.csv")
 write_csv(fp_times, "fp_times.csv")
 
-
 # ICP Tests
-
 
 
 # Vergleich auf den Originalwolken
@@ -378,8 +371,6 @@ for model in model_array:
 
 write_csv(original_fitness, "original_fitness.csv")
 write_csv(original_fitness, "original_icp_fitness.csv")
-
-
 
 rd_icp_fitness = []
 rd_icp_inlier = []
@@ -419,9 +410,7 @@ write_csv(rd_icp_inlier, "rd_icp_inlier.csv")
 write_csv(vf_icp_inlier, "vf_icp_inlier.csv")
 write_csv(fp_icp_inlier, "fp_icp_inlier.csv")
 
-
 # Noisiness test basic models
-
 
 
 model_array = [cube, cone, sphere]
@@ -445,10 +434,8 @@ for index, model in enumerate(model_array):
     noisy_model_fp_pc.points = o3d.utility.Vector3dVector(np.asarray(noisy_model_fp.points))
     point_cloud_to_ply(noisy_model_fp_pc, "noisy_fp_" + model_names[index - 1])
 
-
 noisetest = load_cad_model(r"point_cloud_images/noisy_rd_complex_sphere.ply")
 visualize_model(noisetest)
-
 
 # noisiness tests complex models
 
@@ -470,7 +457,6 @@ for index, complex_model in enumerate(model_array):
     noisy_complex_model_fp_pc.points = o3d.utility.Vector3dVector(np.asarray(noisy_complex_model_fp.points))
     point_cloud_to_ply(noisy_complex_model_fp_pc, "noisy_fp_" + model_names[index])
 
-
 # noisiness tests objects
 
 
@@ -480,8 +466,8 @@ model_names = ["book", "teapot", "pencil"]
 for index, model_object in enumerate(model_array):
     # random downsampling
     noisy_model_object = add_noise(model_object, 0.1)
-    #rd_noisy = random_downsampling(noisy_model_object, int(len(noisy_model_object.points) / 10 * 4))
-    #point_cloud_to_ply(rd_noisy, "noisy_rd_" + model_names[index])
+    rd_noisy = random_downsampling(noisy_model_object, int(len(noisy_model_object.points) / 10 * 4))
+    point_cloud_to_ply(rd_noisy, "noisy_rd_" + model_names[index])
 
     # voxel grid filter
     noisy_model_object_grid = create_voxel_grid(noisy_model_object, 0.2)
@@ -494,15 +480,10 @@ for index, model_object in enumerate(model_array):
     noisy_model_object_fp_pc.points = o3d.utility.Vector3dVector(np.asarray(noisy_model_object_fp.points))
     point_cloud_to_ply(noisy_model_object_fp_pc, "noisy_fp_" + model_names[index])
 
-
-
 visualize_model(load_cad_model(r"point_cloud_images/noisy_rd_cube.ply"))
-
-
 
 for point in cone.points:
     print(point)
-
 
 # DOWNSAMPLING SIMPLE AUFBAU
 
@@ -527,8 +508,3 @@ for index, model in enumerate(model_array):
     noisy_model_fp_pc = o3d.geometry.PointCloud()
     noisy_model_fp_pc.points = o3d.utility.Vector3dVector(np.asarray(noisy_model_fp.points))
     point_cloud_to_ply_simple(noisy_model_fp_pc, "fp_" + model_names[index - 1])
-
-
-
-
-
